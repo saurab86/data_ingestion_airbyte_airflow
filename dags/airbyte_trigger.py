@@ -19,14 +19,14 @@ with DAG(dag_id='trigger_airbyte',
       trigger_airbyte_sync = AirbyteTriggerSyncOperator(
        task_id='trigger_airbyte',
        airbyte_conn_id='airbyte_default',
-       connection_id='d83aa577-f047-4c48-9f76-01f8b4dd02b8',
+       connection_id=AIRBYTE_CONNECTION_ID,
        asynchronous=True
    )
       
-      query_data = SQLExecuteQueryOperator(
-        task_id='query_data_from_postgres',
+      data_transform = SQLExecuteQueryOperator(
+        task_id='transform_data_in_postgres',
         conn_id='postgres_default',
-        sql='''SELECT * FROM customers;'''
+        sql='''SELECT count(CustomerID) AS total_customers FROM customers;'''
     )
 
-trigger_airbyte_sync >> query_data
+trigger_airbyte_sync >> data_transform
