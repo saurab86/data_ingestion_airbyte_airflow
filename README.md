@@ -30,5 +30,4 @@ Ensure the following are installed and configured:
 **Airbyte Connection**:
 ![Screenshot from 2025-02-20 00-42-47](https://github.com/user-attachments/assets/6b312c99-9104-4776-a65b-86ce3aa36d37)
 
-**Airflow DAG Graph**:
-![Screenshot from 2025-02-23 13-54-56](https://github.com/user-attachments/assets/723b7ada-5436-42cf-bbcf-2bd7a7bd7753)
+**Airflow DAG Graph**:![Screenshot from 2025-02-23 13-54-56](https://github.com/user-attachments/assets/fe65d8d1-acb3-4a30-aa9c-2eb634c39301)
